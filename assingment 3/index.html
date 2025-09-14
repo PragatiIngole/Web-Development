@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Report Card</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
+    }
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 25px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    }
+    table {
+      width: 60%; 
+      margin: 20px auto;
+      border-collapse: separate;
+      border-spacing: 0;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+      border-radius: 10px;
+      overflow: hidden;
+      background: #fff;
+    }
+    th, td {
+      padding: 12px;
+      text-align: center;
+    }
+    th {
+      background-color: #6c5ce7; 
+      color: #fff;
+      font-size: 15px;
+      letter-spacing: 0.5px;
+    }
+    tr:nth-child(even) td {
+      background-color: #f7f7f7;
+    }
+    tr:hover td {
+      background-color: #dfe6e9;
+      cursor: pointer;
+    }
+    .total-row td {
+      font-weight: bold;
+      background-color: #ffeaa7;
+      color: #2d3436;
+    }
+    table tr:first-child th:first-child { border-top-left-radius: 10px; }
+    table tr:first-child th:last-child { border-top-right-radius: 10px; }
+    table tr:last-child td:first-child { border-bottom-left-radius: 10px; }
+    table tr:last-child td:last-child { border-bottom-right-radius: 10px; }
+  </style>
+</head>
+<body>
+  <h1>📘 Student Report Card</h1>
+
+  <table>
+    
+    <tr>
+      <th>Roll No</th>
+      <th>Name</th>
+      <th>Subject</th>
+      <th>Marks</th>
+      <th>Grade</th>
+    </tr>
+
+    <tr>
+      <td>1</td>
+      <td>Pragati</td>
+      <td>Math</td>
+      <td>85</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Pratik</td>
+      <td>Math</td>
+      <td>95</td>
+      <td>A+</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Arya</td>
+      <td>English</td>
+      <td>80</td>
+      <td>B+</td>
+    </tr>
+
+    <tr>
+      <td>4</td>
+      <td>Shivam</td>
+      <td>Science</td>
+      <td>78</td>
+      <td>B</td>
+    </tr>
+</table>
+</body>
+</html>
