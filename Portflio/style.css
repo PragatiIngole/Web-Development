@@ -1,0 +1,273 @@
+/* --- General Styles --- */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #f9fafb;
+  color: #222;
+  scroll-behavior: smooth;
+}
+
+/* --- Navbar --- */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  padding: 15px 0;
+  text-align: center;
+  z-index: 10;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar li {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1em;
+  transition: color 0.3s;
+}
+
+.navbar a:hover,
+.navbar .active {
+  color: #ffea00;
+}
+
+/* --- Header Section --- */
+.header {
+  background-image: url('header-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  color: white;
+  padding: 100px 20px 120px;
+  position: relative;
+  z-index: 3;
+  overflow: hidden;
+}
+
+/* subtle overlay */
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  box-shadow: 0 0 20px rgba(255,255,255,0.5);
+  transition: transform 0.3s;
+}
+
+.profile-pic:hover {
+  transform: scale(1.1);
+}
+
+/* Absolute badge */
+.badge {
+  position: absolute;
+  top: 90px;
+  right: 46%;
+  background: gold;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 20px;
+  animation: float 2s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.name {
+  margin-top: 15px;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+.role {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.btn {
+  background: #ffea00;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #fff;
+  color: #2575fc;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* --- About Section --- */
+.about-section {
+  background: linear-gradient(180deg, #ffffff, #e0e7ff);
+  padding: 70px 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.card {
+  max-width: 700px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.hidden-text {
+  visibility: hidden;
+}
+
+/* --- Sidebar --- */
+.sidebar {
+  position: relative;
+  width: 250px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  float: right;
+  margin: 40px;
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.sidebar h3 {
+  text-align: center;
+  color: #2575fc;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.sidebar li {
+  padding: 8px 0;
+  font-weight: 500;
+}
+
+/* --- Projects Section --- */
+.projects-section {
+  background: #eef2ff;
+  text-align: center;
+  padding: 70px 20px;
+  z-index: 1;
+}
+
+.project-card {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  max-width: 500px;
+  margin: 25px auto;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+}
+
+/* --- Footer --- */
+.footer {
+  background: #1f2937;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.footer a {
+  color: #ffea00;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.credit {
+  margin-top: 15px;
+  font-size: 0.9em;
+  color: #aaa;
+}
+
+/* --- Fixed Contact Button --- */
+.fixed-contact {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #2575fc;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+  z-index: 20;
+}
+
+.fixed-contact:hover {
+  background: #6a11cb;
+  transform: scale(1.1);
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+  }
+
+  .header {
+    padding: 80px 10px;
+  }
+
+  .card, .project-card {
+    width: 90%;
+  }
+
+  .btn {
+    font-size: 0.9em;
+  }
+}
